@@ -1,0 +1,306 @@
+
+/* imported google font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Tinos&display=swap');
+
+
+/* Variables for colors I didn't actually end up using, but I did expirement using the variables! */
+:root {
+    --clr-neutral-900: hsla(209, 28%, 65%, 0.349);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: rgb(255, 255, 255);
+    --clr-text-1: rgb(0, 0, 0);
+}
+/* Scrolling effect */
+html{
+    scroll-behavior: smooth;
+    /* overflow: scroll; */
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+}
+
+/* navigation stylization */
+header{
+    background-color: rgb(15, 67, 97);
+    box-shadow: 10px 10px 8px #888;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    overflow:hidden;
+    z-index: 1000;
+    
+    top: 0;
+    width: 100%;
+}
+/* Header 1 (my name) shadow stylization */
+header h1{
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(253, 250, 237, 0.8), 0 0 0 #222;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0 auto 0 50px;
+    
+}
+/* Nav bar anchor shadow styling */
+header li a{
+    font-weight: 400;
+    font-size: 20px;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(253, 250, 237, 0.8), 0 0 0 #222;
+}
+/* Background color */
+body {
+    background: var(--clr-neutral-900);
+}
+/* my image, border radius and resize */
+img{
+    max-width: 15%;
+    height: auto;
+    border-radius: 10%;
+}
+/* figure in which the animated figure content resides */
+figure {
+    min-width: 100px;
+    background-color: aquamarine;
+    /*border: whitesmoke solid 3px; */
+    box-shadow: 10px 10px 8px #888;
+    height: 30rem;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    flex: 1;
+    transition: 0.75s;
+}
+/* hover animation to enlarge and widen figure */
+figure:hover{
+    flex: 8;
+   height: 40rem;
+}
+/* active property to shrink slightly when clicked (active) */
+figure:active{
+   transform: scale(.992);
+   transition: 50ms;
+}
+/* this applies transparency in the non-hovered state to the paragraphs in the figurs but not the headers */
+.fig-content > *:not(.fig-content h2){
+   opacity: 0;
+}
+/* this applies a transition from 0 opacity to 1 opacity (visible) on hover to the figure content */
+figure:hover .fig-content > * {
+   opacity: 1;
+   transition: opacity 1s linear;
+}
+/* this animation moves figure content from the top to the bottom */ 
+figure:hover .fig-content{
+   transform: translateY(40%);
+}
+/* this applies the scale transformation to the underline under the h2 in the figures, makes it move from left to right */
+figure:hover .fig-content h2::after{
+   transform: scaleX(1);
+}
+
+
+
+/* footer styling, shadow effect added to text, list style taken away, items centered and spaced evenly */
+footer{
+    background-color: rgb(15, 67, 97);
+    color:rgba(253, 250, 237, 0.8);
+    height: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+footer ul{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+footer ul li{
+    list-style: none;
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(253, 250, 237, 0.8), 0 0 0 #222;
+}
+
+
+
+/* Classes */
+
+/* .nav_links class and hover/after psuedo class and elements all used for the navigation animations and shadow highlighting effect */
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 50px;
+    position: relative;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
+}
+
+.nav_links li a::after{
+    content: "";
+    position: absolute;
+    left: 12%;
+    bottom: 0;
+    width: 75%;
+    height: 2px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 100ms ease-in;
+
+}
+.nav_links li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+    
+}
+
+
+/* I tried adding/removing most of this code here to the media queries to try and debug some viewport issues with animations etc. so the order of classes here is a little messy */
+
+.flex-section {
+    /* max-height: 900px; */
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto 100px;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+/* background image of my first challenge on figure 1 */
+.fig-back-1{
+    background-image: url(/assets/img/Screenshot.png);
+}
+
+/* general styling applied to different sections coresponding to their given class */
+.work-header{
+    margin-bottom: 2rem;
+    padding-top: 10rem;
+    font-size: 48px;
+    text-align: center;
+}
+.about{
+    top: -100px;
+    margin-top: 0;
+    padding-top: 20rem;
+    text-align: center;
+}
+.about h2{
+    font-size: 48px;
+    padding: 7rem;
+}
+.about p{
+    margin-top: 10rem;
+}
+.resume-header{
+    text-align: center;
+    font-size: 48px;
+    margin-top: 10rem;
+    padding: 10rem;
+}
+
+.resume{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+
+/* gradient coloring and transition animation for the figure content, making the header and text move down when hovered over */
+.fig-content {
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        rgb(5, 97, 136) 35%,
+        hsl(0 0% 0% /1)
+    );
+    color: rgba(253, 250, 237, 0.8);
+    margin:0;
+    padding: 1.5rem;
+    transform: translateY(0%);
+    height: 40rem;
+
+    transition: transform 500ms ease;
+}
+
+.fig-content h2, .fig-content p{
+    margin: 10px 0px 0px 40px;
+    bottom: -190px;
+    padding: 6px;
+    position: relative;
+    width:fit-content;
+}
+
+/* animation for the underline that appears from the left of the figure when hovered over, underlines the header of each figure */
+.fig-content h2::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: -65px;
+    bottom: 0;
+    width: calc(100% + 65px);
+    background: rgba(253, 250, 237, 0.8);
+    transform: scaleX(0);
+    transform-origin: left;
+        
+    transition: 750ms ease;
+    
+}
+
+.fig-content h2{
+    color: transparent;
+    text-shadow: 1px 1px 1px rgba(253, 250, 237, 0.8), 0 0 0 #222;
+}
+    
+
+/* icons imported from ion-icon for the Github and Linked in logos*/
+ion-icon{
+    font-size: 64px;
+    color: rgba(253, 250, 237, 0.8);
+}
+
+/* Media queries added to change display to column flex and increase margin of figures to make room for text when shrinking viewport */
+    @media (hover: none){
+
+        header{
+            flex-wrap: wrap;
+        } 
+
+         .flex-section{
+            flex-direction: column;
+        }
+    }
+    
+    @media (max-width: 680px){
+
+        figure, .fig-content{
+            
+        }
+    }
+    @media (max-width: 470px){
+        figure, .fig-content{
+            
+        }
+    }

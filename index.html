@@ -4,14 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tab title-->
     <title>James' Sweet Portfolio</title>
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <!--Header and navigation: My name on the far left and navigation bar on far right, with ID's associated for each section-->
+    <header>
+        <h1>James Ioriatti</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <!-- First section is for about-me, to be added to at a later date-->
+        <section class="about" id="about">
+            <h2 class="section-header">About Me</h2>
+            <!--My photo-->
+            <img src="/assets/img/PXL_20220913_142513227 (1).jpg" alt="James Ioriatti">
+            <p>I am a student currently enrolled in the Northwestern coding bootcamp. (To be appended at a later date.)</p>
+        </section>
+        <!--I realized later on that puting the ID on the header itself and not on a parent section makes the scrolling animation line up much better, the parent section also probably is unnessisary-->
+        <h2 id="work" class="work-header">Work</h2>
+        <!-- cool animation section showcasing first challenge and future work-->
+        <section class="flex-section">
+            <figure class="fig-back-1">
+                <a href="https://jioriatti.github.io/Challenge-Assignment-01/" target="_blank">
+                    <figure class="fig-content">
+                        <h2>Challenge Assignment 1</h2>
+                        <p>My first challenge assignment of the Northwestern coding bootcamp. Our task was to add accessability to an existing webpage, implement introductory CSS techniques, refine markup and CSS code, and improve search engine optimization through the replacement of div's with semantic HTML elements. </p>
+                    </figure>
+                </a>
+            </figure>
+            <figure class="fig">
+                <figure class="fig-content">
+                    <h2>Cool Work 2</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quas velit libero, delectus earum fugit animi quidem debitis eaque voluptatem. Exercitationem iusto ex quos in nisi dolore sapiente vitae facere.</p>
+                </figure>
+
+            </figure>
+            <figure class="fig">
+                <figure class="fig-content">
+                    <h2>Cool Work 3</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quas velit libero, delectus earum fugit animi quidem debitis eaque voluptatem. Exercitationem iusto ex quos in nisi dolore sapiente vitae facere.</p>
+                </figure>
+            </figure>
+            <figure class="fig">
+                <figure class="fig-content">
+                    <h2>Cool Work 4</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quas velit libero, delectus earum fugit animi quidem debitis eaque voluptatem. Exercitationem iusto ex quos in nisi dolore sapiente vitae facere.</p>
+                </figure>
+            </figure>
+            <figure class="fig">
+                <figure class="fig-content">
+                    <h2>Cool Work 5</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quas velit libero, delectus earum fugit animi quidem debitis eaque voluptatem. Exercitationem iusto ex quos in nisi dolore sapiente vitae facere.</p>
+                </figure>
+            </figure>
+        </section>
+        <!--Resume section, to be added at a later date-->
+        <h2 class="resume-header" id="resume">Resume</h2>
+        <p class="resume">Placeholder Resume</p>
+ 
+    </main>
+    <!--Footer with contact information and links to my Github and LinkedIn wrapped around icons I imported from ion-icon-->
+    <footer id="contact">
+        <ul>
+            <li>
+                <a>(847)-610-0793</a>
+            </li>
+            <li>
+                <a>je6ioriatti@gmail.com</a>
+            </li>
+            <li>
+                <a href="https://github.com/JIoriatti" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/james-ioriatti-072565176/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon> 
+                </a>
+            </li>
+        </ul>
+    </footer>
     
+    <!--script tags for social media icon usage within footer-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
