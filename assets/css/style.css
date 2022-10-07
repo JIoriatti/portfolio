@@ -192,7 +192,7 @@ footer ul li{
 }
 /* background image of my first challenge on figure 1 */
 .fig-back-1{
-    background-image: url("/Screenshot.png");
+    background-image: url("../img/Screenshot.png");
 }
 
 /* general styling applied to different sections coresponding to their given class */
