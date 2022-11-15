@@ -194,6 +194,12 @@ footer ul li{
 .fig-back-1{
     background-image: url("../img/Screenshot.png");
 }
+.fig-back-2{
+    background-image: url("../img/deckbuilders-screenshot.PNG");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 /* general styling applied to different sections coresponding to their given class */
 .work-header{
@@ -247,7 +253,7 @@ footer ul li{
 
 .fig-content h2, .fig-content p{
     margin: 10px 0px 0px 40px;
-    bottom: -190px;
+    bottom: -150px;
     padding: 6px;
     position: relative;
     width:fit-content;
