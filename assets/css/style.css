@@ -200,6 +200,12 @@ footer ul li{
     background-size: auto;
     background-repeat: no-repeat;
 }
+.fig-back-3{
+    background-image: url("../img/3.PNG");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 /* general styling applied to different sections coresponding to their given class */
 .work-header{
