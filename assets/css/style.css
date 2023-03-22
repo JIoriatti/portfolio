@@ -206,6 +206,12 @@ footer ul li{
     background-size: auto;
     background-repeat: no-repeat;
 }
+.fig-back-4{
+    background-image: url("../img/timewellspent6.PNG");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 /* general styling applied to different sections coresponding to their given class */
 .work-header{
